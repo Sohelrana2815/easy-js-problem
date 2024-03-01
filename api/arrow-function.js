@@ -27,3 +27,4 @@ console.log(sum3);
 const add4 = (a, b, c, d, e, f) => a + b + c + d + e + f;
 const sum4 = (2815, 3260, 727, 31007, 152302);
 console.log(sum4);
+ 
