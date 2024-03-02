@@ -25,4 +25,8 @@ console.log(boyos);
 // console.log(age);
 // console.log(money);
 
+//---- Destructuring from object
 
+const numbers = [45, 89];
+const [first, second] = numbers;
+const [x, y] = [12, 56];
