@@ -19,8 +19,8 @@ const { address } = actor;
 // const age = actor.age;
 // const money = actor.money;
 
-console.log(phone);
-console.log(boyos);
+// console.log(phone);
+// console.log(boyos);
 
 // console.log(age);
 // console.log(money);
@@ -30,3 +30,11 @@ console.log(boyos);
 const numbers = [45, 89];
 const [first, second] = numbers;
 const [x, y] = [12, 56];
+
+//
+function doubleThem(a, b) {
+  return [a * 2, b * 2]; // return an array
+}
+
+const [num1, num2] = doubleThem(6, 9);
+console.log(num1, num2);
