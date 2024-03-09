@@ -1,4 +1,4 @@
-const addToCart = () => {
+addToCart = () => {
   const productField = document.getElementById("product-name");
   const quantityField = document.getElementById("product-quantity");
   const product = productField.value;
@@ -14,7 +14,7 @@ const displayProduct = (product, quantity) => {
   const li = document.createElement("li");
   li.innerText = `${product}: ${quantity}`;
   ul.appendChild(li);
-  savedProductToLocalStorage(product, quantity);
+  saveProductToLocalStorage(product, quantity);
 };
 
 const getStoredCart = () => {
@@ -26,7 +26,7 @@ const getStoredCart = () => {
   return cart;
 };
 
-const savedProductToLocalStorage = (product, quantity) => {
+const saveProductToLocalStorage = (product, quantity) => {
   const cart = getStoredCart();
   cart[product] = quantity;
   console.log(cart);
@@ -37,11 +37,11 @@ const savedProductToLocalStorage = (product, quantity) => {
 
 const displayProductFromLocalStorage = () => {
   const savedCart = getStoredCart();
+  console.log(savedCart);
   for (const product in savedCart) {
     const quantity = savedCart[product];
     console.log(product, quantity);
     displayProduct(product, quantity);
   }
-  console.log(savedCart);
 };
 displayProductFromLocalStorage();

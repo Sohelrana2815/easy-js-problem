@@ -14,7 +14,7 @@ const displayProduct = (product, quantity) => {
   const li = document.createElement("li");
   li.innerText = `${product}: ${quantity}`;
   ul.appendChild(li);
-  savedProductToLocalStorage(product, quantity);
+  displayProductFromLocalStorage(product, quantity);
 };
 
 const getStoredCart = () => {
@@ -37,11 +37,15 @@ const savedProductToLocalStorage = (product, quantity) => {
 
 const displayProductFromLocalStorage = () => {
   const savedCart = getStoredCart();
+  console.log(savedCart);
+
   for (const product in savedCart) {
     const quantity = savedCart[product];
     console.log(product, quantity);
+
+    console.log(product);
     displayProduct(product, quantity);
   }
-  console.log(savedCart);
 };
+
 displayProductFromLocalStorage();
